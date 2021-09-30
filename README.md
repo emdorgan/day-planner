@@ -40,3 +40,8 @@ This project uses jQuery methods and bootstrap (3rd party APIs) to build an inte
 - [Link to Portfolio Site](https://emdorgan.github.io/portfolio/)
 - [Link to Github](https://github.com/emdorgan)
 - [Link to LinkedIn](https://www.linkedin.com/in/emily-dorgan/)
+
+## Acknowledgements
+
+* **Derek Banister**
+- Earlier today we got a clock to update every second in a joint project, I reused that code in this assignment

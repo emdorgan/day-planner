@@ -57,12 +57,15 @@ textarea{
   color: white;
 }
 
-.saveBtn {
+button {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+}
+button:hover {
+  background-color: #44d7f8;
 }
 
 .saveBtn i:hover {
