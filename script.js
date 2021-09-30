@@ -31,4 +31,3 @@ $(document).ready(function(){           //ensures that the document is loaded be
     update();                           //calls the update function
     setInterval(update, 1000);          //calls the update function every second
 });
-
