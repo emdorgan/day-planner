@@ -31,6 +31,11 @@ var button16 = document.getElementById('btn-16');
 // var allBtn = document.querySelectorAll('button')
 // console.log(allBtn);
 
+var num = 12                        // testing out if I can iterate through the block
+var test = num.toString();          // the test was successful, this method will likely be used
+var timeBlockStorage = localStorage.getItem(test);
+//console.log(timeBlockStorage);          // to ask: How do I then place it in the time-block?
+
 function update(){                      //function used to contiuously update the date/time
     date = moment(new Date());          //uses the date() jquery method to get a new date and store it in date variable
     datetime.html(date.format('dddd, MMMM Do YYYY, h:mm:ss a')); //inputs the new date into an HTML element, uses moment.js format for readability
@@ -42,58 +47,53 @@ $(document).ready(function(){           //ensures that the document is loaded be
     update();                           //calls the update function
     setInterval(update, 1000);          //calls the update function every second
     
-
     //document.getElementById('btn-9').addEventListener('click', storeTask(9));
 });
 
+$("#user-info-9").attr("value",localStorage.getItem("user-info-9"));
+
+$(".fas").on("click",function(event){
+    event.preventDefault();
+    var time = $(this).siblings(".col-lg-10").attr("id");
+    var note = $(this).siblings(".col-lg-10").val();
+    console.log(time, note);
+    localStorage.setItem(time,note);
+})
+
+// button9.addEventListener('click', function(event){
+//     event.preventDefault();
+//     localStorage.setItem(9, $('#user-info-9').val())
+// });
+// button10.addEventListener('click', function(event){
+//     event.preventDefault();
+//     localStorage.setItem(10, $('#user-info-10').val())
+// });
+// button11.addEventListener('click', function(event){
+//     event.preventDefault();
+//     localStorage.setItem(11, $('#user-info-11').val())
+// });
+// button12.addEventListener('click', function(event){
+//     event.preventDefault();
+//     localStorage.setItem(12, $('#user-info-12').val())
+// });
+// button13.addEventListener('click', function(event){
+//     event.preventDefault();
+//     localStorage.setItem(13, $('#user-info-13').val())
+// });
+// button14.addEventListener('click', function(event){
+//     event.preventDefault();
+//     localStorage.setItem(14, $('#user-info-14').val())
+// });
+// button15.addEventListener('click', function(event){
+//     event.preventDefault();
+//     localStorage.setItem(15, $('#user-info-15').val())
+// });
+// button16.addEventListener('click', function(event){
+//     event.preventDefault();
+//     localStorage.setItem(16, $('#user-info-16').val())
+// });
 
 
-button9.addEventListener('click', function(event){
-    event.preventDefault();
-    console.log('here');
-    localStorage.setItem(9, $('#user-info-9').val())
-});
-button10.addEventListener('click', function(event){
-    event.preventDefault();
-    console.log('here');
-    localStorage.setItem(10, $('#user-info-10').val())
-});
-button11.addEventListener('click', function(event){
-    event.preventDefault();
-    console.log('here');
-    localStorage.setItem(11, $('#user-info-11').val())
-});
-button12.addEventListener('click', function(event){
-    event.preventDefault();
-    console.log('here');
-    localStorage.setItem(12, $('#user-info-12').val())
-});
-button13.addEventListener('click', function(event){
-    event.preventDefault();
-    console.log('here');
-    localStorage.setItem(13, $('#user-info-13').val())
-});
-button14.addEventListener('click', function(event){
-    event.preventDefault();
-    console.log('here');
-    localStorage.setItem(14, $('#user-info-14').val())
-});
-button15.addEventListener('click', function(event){
-    event.preventDefault();
-    console.log('here');
-    localStorage.setItem(15, $('#user-info-15').val())
-});
-button16.addEventListener('click', function(event){
-    event.preventDefault();
-    console.log('here');
-    localStorage.setItem(16, $('#user-info-16').val())
-});
-
-// for(var i=0; i<allBtn.length; i++){
-//     allBtn.item(i).addEventListener('click', function(){
-//         localStorage.setItem(i+9, $('#user-info-9').val()) <---- how do I get this to work?
-//     });
-// }
 
     // $('#btn-9').on('click', storeTask(9));
     // $('#btn-10').on('click', storeTask(10));
@@ -103,3 +103,10 @@ button16.addEventListener('click', function(event){
     // $('#btn-14').on('click', storeTask(14));
     // $('#btn-15').on('click', storeTask(15));
     // $('#btn-16').on('click', storeTask(16));
+
+    // $(document).on('click', '#btn', storeTask)
+    // function storeTask(){
+    // var timeBtn = $(this.event).attr('data');
+    // localStorage.setItem(timeBtn, ???)
+    //}
+

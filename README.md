@@ -4,8 +4,6 @@ This project uses jQuery methods and bootstrap (3rd party APIs) to build an inte
 
 ## To-do list
 
-* Bootstrap the basic rows & columns for the day planner
-* Make sure the boxes are input fields for the user
 * Make functions for the boxes to change color based on time of day
 * Add a save function that saves to local storage, and retrieve that event on page load
 
@@ -19,7 +17,7 @@ This project uses jQuery methods and bootstrap (3rd party APIs) to build an inte
 
 ## Deployed Link
 
-* [See Live Site](#)
+* [See Live Site](https://emdorgan.github.io/day-planner/)
 
 ## Screenshots
 
