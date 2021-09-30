@@ -6,7 +6,6 @@ This project uses jQuery methods and bootstrap (3rd party APIs) to build an inte
 
 * Bootstrap the basic rows & columns for the day planner
 * Make sure the boxes are input fields for the user
-* Build the updating timer function at the top of the page
 * Make functions for the boxes to change color based on time of day
 * Add a save function that saves to local storage, and retrieve that event on page load
 
