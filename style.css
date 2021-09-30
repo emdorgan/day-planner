@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -79,4 +79,9 @@ div i {
   margin-top: 15px;
   margin-left: 6px;
   color: darkblue;
+}
+form label{
+  margin: 0 auto;
+  padding-top: 20px;
+  font-size: 1.1em;
 }

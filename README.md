@@ -11,7 +11,7 @@ This project uses jQuery methods and bootstrap (3rd party APIs) to build an inte
 
 ## Possible Improvements
 
-* 
+* Make it possible to add two events for a single timeblock
 
 ## Getting Started
 
