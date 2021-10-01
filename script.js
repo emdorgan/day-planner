@@ -20,21 +20,6 @@
 
 var datetime;                           // initializes 2 variables for the active date/time counter
 var date;
-var button9 = document.getElementById('btn-9');
-var button10 = document.getElementById('btn-10');
-var button11 = document.getElementById('btn-11');
-var button12 = document.getElementById('btn-12');
-var button13 = document.getElementById('btn-13');
-var button14 = document.getElementById('btn-14');
-var button15 = document.getElementById('btn-15');
-var button16 = document.getElementById('btn-16');
-// var allBtn = document.querySelectorAll('button')
-// console.log(allBtn);
-
-var num = 12                        // testing out if I can iterate through the block
-var test = num.toString();          // the test was successful, this method will likely be used
-var timeBlockStorage = localStorage.getItem(test);
-//console.log(timeBlockStorage);          // to ask: How do I then place it in the time-block?
 
 function update(){                      //function used to contiuously update the date/time
     date = moment(new Date());          //uses the date() jquery method to get a new date and store it in date variable
@@ -46,15 +31,30 @@ $(document).ready(function(){           //ensures that the document is loaded be
     datetime = $('#currentDay')         //stores the pointer to the element with currentDay ID
     update();                           //calls the update function
     setInterval(update, 1000);          //calls the update function every second
-    
-    $("#user-info-9").attr("value",localStorage.getItem("user-info-9"));
-    $("#user-info-10").attr("value",localStorage.getItem("user-info-10"));
-    $("#user-info-11").attr("value",localStorage.getItem("user-info-11"));
-    $("#user-info-12").attr("value",localStorage.getItem("user-info-12"));
-    $("#user-info-13").attr("value",localStorage.getItem("user-info-13"));
-    $("#user-info-14").attr("value",localStorage.getItem("user-info-14"));
-    $("#user-info-15").attr("value",localStorage.getItem("user-info-15"));
-    $("#user-info-16").attr("value",localStorage.getItem("user-info-16"));
+    var allRows = $(".row");
+    var hourly = parseInt(date.format('k'));
+    for (var i = 0; i< allRows.length; i++ ){
+        if(parseInt(allRows.eq(i).attr("id")) < hourly){
+            allRows.eq(i).children().eq(1).addClass('past');
+            console.log(allRows.eq(i));
+        }
+        else if(parseInt(allRows.eq(i).attr("id")) > hourly){
+            allRows.eq(i).children().eq(1).addClass('future');
+        }
+        else if (parseInt(allRows.eq(i).attr("id")) === hourly){
+            allRows.eq(i).children().eq(1).addClass('present');
+        }
+
+    };
+
+    $("#user-info-9").attr("value", localStorage.getItem("user-info-9"));
+    $("#user-info-10").attr("value", localStorage.getItem("user-info-10"));
+    $("#user-info-11").attr("value", localStorage.getItem("user-info-11"));
+    $("#user-info-12").attr("value", localStorage.getItem("user-info-12"));
+    $("#user-info-13").attr("value", localStorage.getItem("user-info-13"));
+    $("#user-info-14").attr("value", localStorage.getItem("user-info-14"));
+    $("#user-info-15").attr("value", localStorage.getItem("user-info-15"));
+    $("#user-info-16").attr("value", localStorage.getItem("user-info-16"));
     
     $(".fas").on("click",function(event){
         event.preventDefault();
