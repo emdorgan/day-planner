@@ -47,66 +47,21 @@ $(document).ready(function(){           //ensures that the document is loaded be
     update();                           //calls the update function
     setInterval(update, 1000);          //calls the update function every second
     
-    //document.getElementById('btn-9').addEventListener('click', storeTask(9));
+    $("#user-info-9").attr("value",localStorage.getItem("user-info-9"));
+    $("#user-info-10").attr("value",localStorage.getItem("user-info-10"));
+    $("#user-info-11").attr("value",localStorage.getItem("user-info-11"));
+    $("#user-info-12").attr("value",localStorage.getItem("user-info-12"));
+    $("#user-info-13").attr("value",localStorage.getItem("user-info-13"));
+    $("#user-info-14").attr("value",localStorage.getItem("user-info-14"));
+    $("#user-info-15").attr("value",localStorage.getItem("user-info-15"));
+    $("#user-info-16").attr("value",localStorage.getItem("user-info-16"));
+    
+    $(".fas").on("click",function(event){
+        event.preventDefault();
+        var time = $(this).siblings(".col-lg-10").attr("id");
+        var note = $(this).siblings(".col-lg-10").val();
+        console.log(time, note);
+        localStorage.setItem(time,note);
+    });
+
 });
-
-$("#user-info-9").attr("value",localStorage.getItem("user-info-9"));
-
-$(".fas").on("click",function(event){
-    event.preventDefault();
-    var time = $(this).siblings(".col-lg-10").attr("id");
-    var note = $(this).siblings(".col-lg-10").val();
-    console.log(time, note);
-    localStorage.setItem(time,note);
-})
-
-// button9.addEventListener('click', function(event){
-//     event.preventDefault();
-//     localStorage.setItem(9, $('#user-info-9').val())
-// });
-// button10.addEventListener('click', function(event){
-//     event.preventDefault();
-//     localStorage.setItem(10, $('#user-info-10').val())
-// });
-// button11.addEventListener('click', function(event){
-//     event.preventDefault();
-//     localStorage.setItem(11, $('#user-info-11').val())
-// });
-// button12.addEventListener('click', function(event){
-//     event.preventDefault();
-//     localStorage.setItem(12, $('#user-info-12').val())
-// });
-// button13.addEventListener('click', function(event){
-//     event.preventDefault();
-//     localStorage.setItem(13, $('#user-info-13').val())
-// });
-// button14.addEventListener('click', function(event){
-//     event.preventDefault();
-//     localStorage.setItem(14, $('#user-info-14').val())
-// });
-// button15.addEventListener('click', function(event){
-//     event.preventDefault();
-//     localStorage.setItem(15, $('#user-info-15').val())
-// });
-// button16.addEventListener('click', function(event){
-//     event.preventDefault();
-//     localStorage.setItem(16, $('#user-info-16').val())
-// });
-
-
-
-    // $('#btn-9').on('click', storeTask(9));
-    // $('#btn-10').on('click', storeTask(10));
-    // $('#btn-11').on('click', storeTask(11));
-    // $('#btn-12').on('click', storeTask(12));
-    // $('#btn-13').on('click', storeTask(13));
-    // $('#btn-14').on('click', storeTask(14));
-    // $('#btn-15').on('click', storeTask(15));
-    // $('#btn-16').on('click', storeTask(16));
-
-    // $(document).on('click', '#btn', storeTask)
-    // function storeTask(){
-    // var timeBtn = $(this.event).attr('data');
-    // localStorage.setItem(timeBtn, ???)
-    //}
-
