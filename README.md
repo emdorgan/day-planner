@@ -1,19 +1,10 @@
 # Work Day Organizer
 
-This project uses jQuery methods and bootstrap (3rd party APIs) to build an interactive scheduler for the user's typical work day (9am to 5pm). At the top of the page, today's date is displayed down to the second. Time blocks are color-coded depending on the current time of day, and the user has the option to enter in events and save them which persist based on local storage.
-
-## To-do list
-
-* Make functions for the boxes to change color based on time of day
-* Add a save function that saves to local storage, and retrieve that event on page load
+This project uses jQuery methods and bootstrap (3rd party APIs) to build an interactive scheduler for the user's typical work day (9am to 5pm). At the top of the page, today's date is displayed down to the second. Time blocks are color-coded depending on the current time of day (past in grey, present in red, future in green), and the user has the option to enter in events and save them which persist based on local storage.
 
 ## Possible Improvements
 
 * Make it possible to add two events for a single timeblock
-
-## Getting Started
-
-
 
 ## Deployed Link
 
@@ -21,7 +12,9 @@ This project uses jQuery methods and bootstrap (3rd party APIs) to build an inte
 
 ## Screenshots
 
-
+![Current time](./screenshots/current-time.png)
+![Time block example](./screenshots/homework.png)
+![Local Storage](./screenshots/storage.png)
 
 ## Built With
 
